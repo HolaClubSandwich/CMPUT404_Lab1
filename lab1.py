@@ -8,4 +8,7 @@ raw_url = "https://raw.githubusercontent.com/HolaClubSandwich/CMPUT404_Lab1/mast
 
 code = requests.get(raw_url, stream=True)
 
+with open("lab1_dowload.py", "wb") as file:
+    file.write(code.content)
+
 print(code.text)
